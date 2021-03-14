@@ -1,0 +1,470 @@
+.aside{
+    background-color: #151417;
+        display: flex;
+        flex-direction: column;
+    
+    .general_section{
+
+        .aside_sections{
+            @include menu_no_bullets();
+            
+            padding: 1rem 0;
+            
+            .aside_sections_item{
+
+                
+                
+               a{
+                color: #8c8c8d;
+                display: flex;
+                align-items: center;
+                padding: .25rem 1rem .25rem 1rem;
+                width: 80%;
+                margin-bottom: .5rem;
+                border-radius: 0 1rem 1rem 0;
+
+                .aside_sections_icon{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        @include icons()
+                    }
+                }
+
+                .aside_sections_name{
+                    flex-basis: 100%;
+                    margin: 0 1rem;
+                }
+
+                .aside_sections_number{
+                    display: none;
+                    &.active{
+                        display: block;
+                        display: flex;
+                        justify-content: flex-end;  
+                    }
+                }
+
+               }
+
+                &:hover{
+                    a{
+                        @include item();
+                    }    
+
+                }
+
+                &.active{
+                   
+                    a{
+                        @include item_active();
+
+                        .aside_sections_name{
+                            @include icons_active();
+                        }
+    
+                        .aside_sections_icon{
+                            
+                            
+                            span{
+                                @include icons_active();
+                            }
+                        }
+    
+                        .aside_sections_number{
+                            display: none;
+                            &.active{
+                                display: block;
+                                display: flex;
+                                justify-content: flex-end;
+                                @include icons_active();
+                                
+                            }
+                            
+                        }
+                    }
+                   
+
+                }
+
+               
+            }
+        }
+    }
+
+    .categories_section{
+
+        .categories_toggle{
+
+            a{
+                        color: #8c8c8d;
+                        display: flex;
+                        align-items: center;
+                        padding: .25rem 1rem .25rem 1rem;
+                        width: 80%;
+                       
+                        border-radius: 0 1rem 1rem 0;
+
+                        margin-bottom: 1rem;
+        
+                        .aside_toggle_icon{
+                            display: flex;
+                            align-items: center;
+        
+                            span{
+                                @include icons()
+                            }
+                        }
+        
+                        .aside_toggle_name{
+                            flex-basis: 100%;
+                            margin: 0 1rem;
+                        }
+        
+                        .aside_toggle_last{
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+        
+                            span{
+                                display: flex;
+                                font-size: 1.2rem;
+                                color: gray;
+                            }
+                        } 
+                    }
+    
+                    
+    
+                    &:hover{
+    
+                        a{
+                           
+                            
+                        .aside_toggle_name{
+                            @include icons_active();
+                        }
+    
+                        .aside_toggle_icon{
+                            
+                            
+                            span{
+                                @include icons_active();
+                            }
+                        }
+    
+                        .aside_toggle_last{
+                            
+                            
+                            span{
+                                @include icons_active();
+                            }
+                        }
+    
+                        }
+                        
+                        
+    
+                    }
+    
+                    &.active{
+    
+                       
+    
+                        
+    
+                    }
+            
+
+        }
+
+        .aside_sections{
+            padding: 1rem 0;
+            @include menu_no_bullets();
+            display: none;
+            align-items: center;
+
+            .aside_sections_item{
+
+                
+               a{
+                color: #8c8c8d;
+                display: flex;
+                align-items: center;
+                padding: .25rem 1rem .25rem 1rem;
+                width: 80%;
+                margin-bottom: .5rem;
+                border-radius: 0 1rem 1rem 0;
+
+                .aside_sections_icon{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        @include icons()
+                    }
+                }
+
+                .aside_sections_name{
+                    flex-basis: 100%;
+                    margin: 0 1rem;
+                }
+
+                .aside_sections_number{
+                    display: none;
+                    &.active{
+                        display: block;
+                        display: flex;
+                        justify-content: flex-end;  
+                    }
+                }
+
+               }
+
+                &:hover{
+                    a{
+                        @include item();
+                    }    
+
+                }
+
+                &.active{
+                   
+                    a{
+                        @include item_active();
+
+                        .aside_sections_name{
+                            @include icons_active();
+                        }
+    
+                        .aside_sections_icon{
+                            
+                            
+                            span{
+                                @include icons_active();
+                            }
+                        }
+    
+                        .aside_sections_number{
+                            display: none;
+                            &.active{
+                                display: block;
+                                display: flex;
+                                justify-content: flex-end;
+                                @include icons_active();
+                                
+                            }
+                            
+                        }
+                    }
+                   
+
+                }
+
+            }
+
+            &.active{
+                display: block;
+            }
+        }
+        
+
+        
+    }
+
+    .folder_section{
+
+        padding: 1rem 0;
+       
+        .folder_plus{
+            a{
+                color: #8c8c8d;
+                display: flex;
+                align-items: center;
+                padding: .25rem 1rem .25rem 1rem;
+                width: 80%;
+                margin-bottom: .5rem;
+                border-radius: 0 1rem 1rem 0;
+                justify-content: space-between;
+
+                .name{
+                    display: flex;
+                    align-items: center;
+                }
+
+                .plus_icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    span{
+                        @include icons();
+                    }
+                }
+            }
+
+            &:hover{
+                a{
+                    .name{
+                        color:white;
+                        
+                    }
+    
+                    .plus_icon{
+                        span{
+                            @include icons_active();
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+
+        .aside_sections{
+            
+            @include menu_no_bullets();
+           
+
+            .aside_sections_item{
+
+                a{
+                    color: #8c8c8d;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .25rem 1rem .25rem 1rem;
+                width: 80%;
+                margin-bottom: .5rem;
+                border-radius: 0 1rem 1rem 0;
+
+                .aside_sections_icon_a{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        display: flex;
+                        font-size: 1.2rem;
+                        color: rgb(0, 197, 148);
+                    }
+                }
+
+                .aside_sections_icon_b{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        display: flex;
+                        font-size: 1.2rem;
+                        color: rgb(0, 85, 197);
+                    }
+                }
+
+                .aside_sections_icon_c{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        display: flex;
+                        font-size: 1.2rem;
+                        color: rgb(85, 0, 197);
+                    }
+                }
+
+                .aside_sections_icon_d{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        display: flex;
+                        font-size: 1.2rem;
+                        color: rgb(197, 0, 99);
+                    }
+                }
+
+                .aside_sections_name{
+                    flex-basis: 100%;
+                    margin: 0 1rem;
+                }
+
+                .aside_sections_number{
+                    display: none;
+
+                    &.active{
+
+                       
+                            display: block;
+                            display: flex;
+                            justify-content: flex-end;
+                            
+                        
+                    }
+                    
+                }
+
+                }
+
+                
+
+               
+                &:hover{
+
+                    a{
+                        @include item();
+                    }
+
+                }
+
+                &.active{
+
+                    a{
+                        @include item_active();
+                        .aside_sections_name{
+                            @include icons_active();
+                        }
+                  
+                        .aside_sections_number{
+        
+                            &.active{      
+                                    
+                                @include icons_active(); 
+                            }
+                            
+                        }
+                    }
+
+                   
+                }
+            
+            }
+        }
+
+    }
+
+    .footer_options{
+        margin-top: auto;
+        .footer_options_item{
+            padding: .25rem 1rem .25rem 1rem;
+           display: flex;
+            .aside_sections_icon{
+                @include icons();
+                margin-right: 1rem;
+            }
+
+            .aside_sections_name{
+
+            }
+
+            &:hover{
+                .aside_sections_icon{
+                    @include icons_active();
+                }
+
+                .aside_sections_name{
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+        }
+    }
+}
