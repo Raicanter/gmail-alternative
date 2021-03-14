@@ -1,0 +1,203 @@
+.header{
+
+    display: flex;
+    padding: 1rem 0.8rem;
+    background-color: #151417;
+    border-radius: 15px 15px 0 0;
+    .header_brand{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            img{
+                width: 150px;
+            }
+        }
+        
+    }
+
+}
+
+.search{
+padding: 0.5rem;
+display: flex;
+align-items: center;
+border-bottom: 1px solid #85848a;
+    .search_box{
+        flex-basis: 100%;
+        display: flex;
+        align-content: stretch;
+
+        .search_box_input{
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+
+            input{
+                flex-basis: 100%;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);;
+                &:hover{
+                    background-color: rgba(73, 73, 73, 0.692); 
+                    color: rgb(170, 170, 170);
+                    
+                }
+                &:focus{
+                    border: none;
+                    border-radius: none;
+                    
+                    background-color: rgba(73, 73, 73, 0.692);
+                    color: rgb(170, 170, 170);
+                    
+
+            }
+        }
+    }
+        .search_button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            button{
+                display: flex;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                span{
+                    display: flex;
+                    color: gray;
+                }
+
+                &:hover{
+                    background-color: rgba(73, 73, 73, 0.692); 
+                    span{
+                        color: rgb(170, 170, 170);
+                    }
+                    }
+                    &:focus{
+                        border: none;
+                        border-radius: none;
+                        
+                        background-color: rgba(73, 73, 73, 0.692);
+                        span{
+                            color: rgb(170, 170, 170);
+                        } 
+                }
+
+                
+            }
+        }
+    }
+    
+    .search_toggle{
+        display: flex;
+        align-items: center;
+        .search_toggler_icon{
+            display: flex;
+            margin-left: 1rem;
+            a{
+                span{
+
+                    @include icons()
+                }
+
+                &:hover{
+                    span{
+                        @include icons_active();
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+}
+
+.navigation_options{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #85848a;
+    .navigation_options_tools{
+        @include menu_no_bullets();
+        display: flex;
+
+        .navigation_options_tools_items{
+            display: flex;
+            margin-right: 1rem;
+            
+           
+
+            a{
+                position: relative;
+                padding: 0.5rem;
+                background-color: #2f2f3200;
+                border-radius: 50%;
+                transition:  background-color 350ms ease;
+
+                .tooltip{
+                
+                    position: absolute;
+                    top: 170%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include item_active();
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                    z-index: 2;
+                    
+                    opacity: 0;
+                    transition:   opacity 350ms ease;
+                    span{
+                        color: white;
+                        
+                    }
+                    
+    
+                }
+                span{
+                    @include icons()
+                }
+
+                &:hover{
+                    @include item_active();
+
+                    .tooltip{
+                        visibility: visible;
+                        opacity: 1;
+
+                        span{
+                            font-weight: normal;
+                            
+                        }
+                    }
+                    span{
+                        @include icons_active();
+                    }
+                }
+            }
+
+            
+            
+            
+        }
+    }
+
+    .header_user{
+        
+        a{
+            display: flex;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 0.5rem;
+            img{
+                @include full_image(); 
+             }
+        }
+        
+    }
+
+}
